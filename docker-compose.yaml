@@ -1,0 +1,11 @@
+services:
+  discovery-service:
+    build: .
+    ports:
+      - '8761:8761'
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
