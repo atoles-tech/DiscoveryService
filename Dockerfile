@@ -1,5 +1,7 @@
 FROM eclipse-temurin:21-jdk-alpine
 
+RUN apk add --no-cache curl
+
 COPY /target/discovery_service-0.0.1-SNAPSHOT.jar /discovery-service/discovery-service.jar
 
 WORKDIR /discovery-service
